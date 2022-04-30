@@ -1,0 +1,179 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  /*========== Font and typography ==========*/
+  --body-font: "Nunito", sans-serif;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  /*========== Colors ==========*/
+  --first-color: hsl(var(--hue), 91%, 54%);
+  --first-color-alt: hsl(var(--hue), 91%, 50%);
+  --title-color: hsl(var(--hue), 4%, 100%);
+  --text-color: hsl(var(--hue), 4%, 85%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(51, 51, 51);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    min-height: 100vh;
+
+}
+
+.loading1 {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #333;
+    z-index: 999;
+
+}
+
+.loader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.row-loader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.objts {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+    border-radius: 50px;
+    background-color: #fff;
+    animation: Loading1 .8s infinite;
+
+}
+
+.objts:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.objts:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.objts:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.objts:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.objts:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.objts:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes Loading1 {
+    0%{
+        min-height: 0;
+    }
+    50%{
+        min-height: 60px;
+    }
+    100%{
+        min-height: 0;
+    }
+}
+
+.pages {
+    display: none;
+}
+
+.header {
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+
+}
+
+.nav-bar {
+    min-width: 100%;
+    min-height: 0%;
+    padding: 30px 100px;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-bar .logo {
+    color: #fff;
+    font-weight: var(--font-black);
+    font-size: 34px;
+
+}
+
+.nav-bar .nav-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-bar .nav-list-left {
+    align-items: flex-end;
+    flex: -1;
+    margin-left: 20px;
+}
+.nav-bar .nav-list li {
+    margin: 8px;
+    padding: 8px;
+    display: flex;
+    list-style: none;
+}
+.nav-bar .nav-list li a {
+    color: #fff;
+    font-size: 18px;
+
+}
+
+
+@media screen and (max-width: 1150px) {
+    .nav-bar .nav-list {
+        display: none;
+    }
+}
