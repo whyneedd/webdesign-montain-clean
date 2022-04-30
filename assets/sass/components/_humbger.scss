@@ -1,0 +1,84 @@
+/* Menu Humbger */
+.humbger,
+.menuhumbg {
+    display: none;
+
+}
+
+@media screen and (max-width: 1179px) {
+    .humbger {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 35px;
+        right: 20%;
+
+        align-items: center;
+        appearance: none;
+        outline: none;
+        cursor: pointer;
+
+    }
+
+    .humbger::before,
+    .humbger::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 8px;
+        border-radius: 5rem;
+        background-color: #000;
+
+        transition: .3s ease;
+
+
+    }
+
+    .humbger.active::before {
+        transform: translateX(5px);
+        background-color: #ff1000;
+
+    }
+
+    .humbger.active::after {
+        transform: translateX(-5px);
+        background-color: #ff1000;
+    }
+
+    .menuhumbg {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(252, 157, 13);
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        left: 0;
+        top: -100%;
+        opacity: 0;
+        transition: .4s;
+        overflow: hidden;
+
+    }
+
+    .menuhumbg.active {
+        top: 0;
+        opacity: 1;
+    }
+
+    .menuhumbg ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .menuhumbg ul li a {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 23px;
+    }
+}

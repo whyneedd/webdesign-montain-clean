@@ -1,0 +1,75 @@
+/* Navigation */
+
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+
+    font-weight: 600;
+    padding: 20px 100px;
+    width: 100%;
+    top: -100%;
+    z-index: 99;
+    margin: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .8s;
+
+}
+
+.navbar.active {
+    opacity: 1;
+    top: 0;
+}
+.navbar .logo {
+    position: relative;
+    display: flex;
+    font-size: 30px;
+
+}
+
+.navbar a {
+    color: #000 !important;
+
+}
+
+
+.navbar .navbar-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.navbar .navbar-list li {
+    list-style: none;
+    display: flex;
+    margin: 8px 12px;
+
+}
+
+.navbar .navbar-list li a {
+    display: block;
+
+}
+
+.navbar .navbar-list li .signUp {
+    display: inline-block;
+    padding: 7px 34px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: rgb(252, 157, 13);
+
+}
+
+@media screen and (max-width: 1170px) {
+    .navbar .navbar-list {
+        display: none;
+
+    }
+    .logo {
+        flex-direction: row;
+    }
+}
